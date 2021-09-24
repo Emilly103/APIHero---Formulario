@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Formulario</title></head>
+<body>
+
+    <link rel="stylesheet" href="style.css">
+    <form action="HeroAPI/V1/API.php?apicall=getheroes" method="POST">
+        <h3 >Gerenciamento de Heróis:
+        <button type="submit" name="btn_pesquisar" class="btn">Listar heróis</button></h3>
+    </form>
+
+    <form name="Formulário de Herois." method="POST" action="HeroAPI/V1/API.php?apicall=createhero">
+
+       <h2 >Cadastro dos Heróis</h2>
+       <h3 >Nome:</h3>
+       <input type="text" name="name" id="name"> <br> <br>
+
+       <h3 >Nome Verdadeiro:</h3>
+       <input type="text" name="realname" id="realname"> <br> <br>
+
+       <h3 >Classificação:</h3>
+       <input type="text" name="rating" id="rating"> <br> <br>
+
+       <h3 >Equipe de Afiliação:</h3>
+       <input type="text" name="teamaffiliation" id="teamaffiliation"> <br> <br>
+
+       <a href="hehe.php" class="btn-cadastrar">
+       <button type="submit" name="btn-cadastrar" class="btn">Cadastrar</button>
+       </a>
+    </form>
+    
+    <form action="HeroAPI/V1/API.php?apicall=updatehero" method="POST">
+        
+        <h2>Alterar herói</h2>
+        <h3 >ID:
+        <input type="text" name="id" id="id" required></h3>
+
+        <h3 >Nome:
+        <input type="text" name="name" id="name" required></h3>
+
+        <h3 >Nome Verdadeiro:
+        <input type="text" name="realname" id="realname" required></h3>
+
+        <h3 >Classificação:
+        <input type="text" name="rating" id="rating" required></h3>
+
+        <h3 >Equipe de Afiliação:
+        <input type="text" name="teamaffiliation" id="teamaffiliation" required></h3>
+
+       <a href="hehe.php" class="btn-alterar">
+       <button type="submit" name="btn_alterar" class="btn">Alterar herói</button>
+       </a>
+
+     </form>
+     
+     <form action="HeroAPI/V1/API.php" method="GET">
+     <h2>Excluir herói</h2>
+          <h3 >ID:
+          <input type="hidden" name="apicall" value="deletehero">
+          <input type="text" name="id" id="id" required>
+
+       <a href="hehe.php" class="btn-excluir">
+       <button type="submit" class="btn-excluir">Excluir herói</button>
+       </a></h3><br>
+
+      </form>
+</body>
+</html>
